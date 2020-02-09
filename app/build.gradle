@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.yunjie.jy"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation project(path: ':library_common')
+
+     // board 白板库
+    implementation('com.tencent.teduboard:TEduBoardSdk:2.1.0')
+    //Trtc 音视频库，如果使用腾讯的云视频 Trtc，则需要加上
+    implementation 'com.tencent.liteav:LiteAVSDK_TRTC:6.5.7272'
+    //imsdk 消息通信库，如果使用腾讯的即时通信 Tim，则需要加上
+    implementation 'com.tencent.imsdk:mobilepbforimsdk:1.6.0.45'
+    compile 'com.tencent.imsdk:imsdk:4.3.145'
+}

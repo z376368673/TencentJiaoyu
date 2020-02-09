@@ -1,0 +1,5 @@
+<resources>
+    <!--DP-->
+    <dimen name="fixed_height_bottom_padding">5dp</dimen>
+    <dimen name="dp_0">0dp</dimen>
+</resources>

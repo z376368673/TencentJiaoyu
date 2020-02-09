@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.library.common">
+    <!--<application>-->
+        <!--<activity android:name=".test.MainAct">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN" />-->
+        <!--<category android:name="android.intent.category.LAUNCHER" />-->
+        <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<provider-->
+                <!--android:name="com.library.common.provider.PhotoFileProvider"-->
+                <!--android:authorities="com.red.packet.provider"-->
+                <!--android:exported="false"-->
+                <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                    <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                    <!--android:resource="@xml/file_paths_public"/>-->
+        <!--</provider>-->
+    <!--</application>-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>
